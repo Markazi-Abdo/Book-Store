@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//Structure of my collection......
 const bookSchema = mongoose.Schema({
     title: {
         type: String,
@@ -11,11 +11,10 @@ const bookSchema = mongoose.Schema({
         required: true,
     },
     year: {
-        type: Date,
+        type: Number,
         required: true
     }
 })
 
 const Books = mongoose.model("books", bookSchema);
-
 export default Books;
