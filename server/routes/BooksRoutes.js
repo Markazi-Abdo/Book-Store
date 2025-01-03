@@ -8,6 +8,7 @@ routes.post('/book', async (req, res)=>{
        if(!req.body.title || !req.body.author || !req.body.year){
           return res.status(400).send({error: "BAD REQUEST WAS NOT UNDERSTOOD......"})
        }
+       
        const book = {
           title: req.body.title,
           author: req.body.author,
