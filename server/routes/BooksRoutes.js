@@ -45,7 +45,7 @@ routes.post('/book', async (req, res)=>{
        const { id } = req.params;
        const book = await Books.findById(id, { _id: 0});
        console.log(book)
-       return res.status(200).json({ foundBook: book, foundId: id });
+       return res.status(200).json({book});
  
     } catch (error) {
        console.log(error);

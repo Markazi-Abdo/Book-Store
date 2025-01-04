@@ -13,7 +13,7 @@ connectDb(DATABASE_URL);
 //This is mandatory for the transparency of our object that we're prividing....
 app.use(express.json())
 //Middleware for cors policy
-app.use(cors({ origin:"http://localhost:8000", methods:['GET', 'POST', 'PUT', 'DELETE'], allowedHeaders:['Content-Type'] }));
+app.use(cors());
 app.use('/store', routes);
 
 app.get('/', (req, res)=>{
